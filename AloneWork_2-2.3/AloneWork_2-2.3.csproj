@@ -94,11 +94,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Data\Open.png" />
+    <Resource Include="Data\Save.png" />
+    <Resource Include="Data\SaveAs.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Data\Bold.png" />
     <Resource Include="Data\Italic.png" />
     <Resource Include="Data\Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\Close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
