@@ -78,10 +78,7 @@ namespace AloneWork_2_2._3
             else
             {
                 textBox.TextDecorations.RemoveAt(0);
-            }
-
-            
-            
+            }         
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -100,7 +97,7 @@ namespace AloneWork_2_2._3
             }
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Click_Open(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Текстовые файлы(*.txt)|*.txt|Все файлы (*.*)| *.*";
@@ -110,7 +107,7 @@ namespace AloneWork_2_2._3
             }
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void MenuItem_Click_SaveAs(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Текстовые файлы(*.txt)|*.txt|Все файлы (*.*)| *.*";
@@ -121,15 +118,11 @@ namespace AloneWork_2_2._3
 
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void MenuItem_Click_Exit(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
 
         }
 
-        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.CommandBindings>
-        <CommandBinding Command="Open" Executed="MenuItem_Click"/>
-        <CommandBinding Command="local:MyCommands.Exit" Executed="MenuItem_Click_2"/>
-        <CommandBinding Command="local:MyCommands.SaveAS" Executed="MenuItem_Click_1"/>
+        <CommandBinding Command="Open" Executed="MenuItem_Click_Open"/>
+        <CommandBinding Command="local:MyCommands.Exit" Executed="MenuItem_Click_Exit"/>
+        <CommandBinding Command="local:MyCommands.SaveAS" Executed="MenuItem_Click_SaveAs"/>
     </Window.CommandBindings>
     
 
@@ -22,8 +22,8 @@
 
         <DockPanel>
             <Menu DockPanel.Dock="Top" VerticalAlignment="Top" Grid.Row="0" FontSize="16">
-                <MenuItem Header="_Файл">
-                    <MenuItem Header="_Открыть" Command="ApplicationCommands.Open">
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Открыть" Command="ApplicationCommands.Open">
                     <MenuItem.Icon>
                             <Image Source="Data/Open.png" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </MenuItem.Icon>
@@ -33,30 +33,34 @@
                             <Image Source="Data/Save.png" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </MenuItem.Icon>
                     </MenuItem>-->
-                    <MenuItem Header="_Сохранить как" Command="ApplicationCommands.SaveAs">>
+                    <MenuItem Header="Сохранить как" Command="local:MyCommands.SaveAS">
                         <MenuItem.Icon>
                             <Image Source="Data/SaveAs.png" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </MenuItem.Icon>
                     </MenuItem>
+                    
                     <Separator/>
-                    <MenuItem Header="_Выход" Command="ApplicationCommands.Exit">
+                    
+                    <MenuItem Header="_Выход" Command="local:MyCommands.Exit">
                         <MenuItem.Icon>
                             <Image Source="Data/Close.png" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
                 
-                <MenuItem Header="_Правка">
+                <MenuItem Header="Правка">
                     <MenuItem Header="Копировать" Command="Copy">
                         <MenuItem.Icon>
                             <Image Source="Data/copy.png" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Вставить" Command="Past">
+                    
+                    <MenuItem Header="Вставить" Command="Paste">
                         <MenuItem.Icon>
                             <Image Source="Data/past.png" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </MenuItem.Icon>
-                    </MenuItem>                    
+                    </MenuItem> 
+                    
                 </MenuItem>
             </Menu>
             
