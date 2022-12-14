@@ -29,7 +29,7 @@ namespace AloneWork_2_2._3
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+            string fontName = ((sender as ComboBox).SelectedItem as String);
             if (textBox != null)
             {
                 textBox.FontFamily = new FontFamily(fontName);
@@ -40,7 +40,7 @@ namespace AloneWork_2_2._3
         {
             if (textBox != null)
             {
-                double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem as TextBlock).Text);
+                double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem as String));
                 textBox.FontSize = fontSize;
             }
         }
