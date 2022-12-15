@@ -76,7 +76,8 @@
                           Height="Auto" 
                           FontSize="16" 
                           SelectionChanged="ComboBox_SelectionChanged"
-                          ItemsSource="{StaticResource fonts}"/>
+                          ItemsSource="{StaticResource fonts}"
+                          Style="{DynamicResource ComboboxStyle}"/>
                 <!--<TextBlock Text="Arial"/>
                     <TextBlock Text="Times New Roman"/>
                     <TextBlock Text="Verdana"/>-->
@@ -89,7 +90,8 @@
                           Height="Auto" 
                           FontSize="16" 
                           SelectionChanged="ComboBox_SelectionChanged_1"
-                          ItemsSource="{StaticResource fonts_sizes}"/>
+                          ItemsSource="{StaticResource fonts_sizes}"
+                          Style="{DynamicResource ComboboxStyle}"/>
                 <!--<TextBlock Text="6"/>
                     <TextBlock Text="8"/>
                     <TextBlock Text="10"/>
@@ -122,6 +124,13 @@
                     <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
                     <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
                 </StackPanel>
+                <ComboBox Name="themes" Width="150"
+                          Margin="20 5 10 5"
+                          SelectedIndex="0" SelectionChanged="themes_SelectionChanged"
+                          Style="{DynamicResource ComboboxStyle}">
+                    <TextBlock Text="Светлая"/>
+                    <TextBlock Text="Темная"/>
+                </ComboBox>
             </ToolBar>
         </ToolBarTray>
         <TextBox x:Name="textBox"  Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible">
